@@ -51,8 +51,8 @@ public class DataProcessor {
     public Collection<RoadAccident> getAccidentsByLocation7(float minLongitude, float maxLongitude, float minLatitude, float maxLatitude){
       List<RoadAccident> result = new ArrayList<>();
       for (RoadAccident ra: roadAccidentList) {
-        if(ra.getLatitude() > minLatitude & ra.getLatitude() < maxLatitude
-                & ra.getLongitude() > minLongitude & ra.getLongitude() < maxLongitude){
+        if(ra.getLatitude() > minLatitude && ra.getLatitude() < maxLatitude
+                && ra.getLongitude() > minLongitude && ra.getLongitude() < maxLongitude){
           result.add(ra);
         }
       }
@@ -150,8 +150,8 @@ public class DataProcessor {
      * @return
      */
     public Collection<RoadAccident> getAccidentsByLocation(float minLongitude, float maxLongitude, float minLatitude, float maxLatitude){
-      return roadAccidentList.stream().filter(ra -> ra.getLatitude() > minLatitude & ra.getLatitude() < maxLatitude
-              & ra.getLongitude() > minLongitude & ra.getLongitude() < maxLongitude)
+      return roadAccidentList.stream().filter(ra -> ra.getLatitude() > minLatitude && ra.getLatitude() < maxLatitude
+              && ra.getLongitude() > minLongitude && ra.getLongitude() < maxLongitude)
               .collect(Collectors.toList());
     }
 
